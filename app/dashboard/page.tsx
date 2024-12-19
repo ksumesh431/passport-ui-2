@@ -1,6 +1,6 @@
 import React from 'react'
 import Rbutton from '@/components/radix-button'
-import GeminiNav from '@/components/gemini-nav'
+import CustomNav from '@/components/custom-nav'
 import CustomFooter from '@/components/footer'
 const Dashboard = () => {
   return (
@@ -9,7 +9,7 @@ const Dashboard = () => {
 
 
 
-      <GeminiNav />
+      <CustomNav />
       <div className="container mx-auto px-4 py-8 ">
         <h1 className="text-2xl font-semibold mb-4">Dashboard</h1>
         <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">

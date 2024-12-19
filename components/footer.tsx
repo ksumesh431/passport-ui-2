@@ -77,10 +77,11 @@ function CustomFooter() {
 
         {/* Copyright */}
         <div className="border-t border-gray-600 mt-8 pt-8 text-center">
-          <p>©2024 SkillStone. All rights reserved.</p>
+          <p>©2025 DocuAid. All rights reserved.</p>
         </div>
       </div>
     </footer>
+
   );
 }
 

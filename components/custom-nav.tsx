@@ -1,10 +1,10 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
-import { Button, Flex } from '@radix-ui/themes';
+import { Button } from '@radix-ui/themes';
 import Rbutton from './radix-button';
 
-function GeminiNav() {
+function CustomNav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -42,12 +42,12 @@ function GeminiNav() {
 
 
 
-                        <Rbutton />
-                        <Button variant="outline">Options</Button>
-                        <Button variant="outline">Options</Button>
-                        <Button variant="outline">Options</Button>
-                        <Button variant="outline">Options</Button>
- 
+                    <Rbutton />
+                    <Button variant="outline">Options</Button>
+                    <Button variant="outline">Options</Button>
+                    <Button variant="outline">Options</Button>
+                    <Button variant="outline">Options</Button>
+
 
                 </div>
 
@@ -78,4 +78,4 @@ function GeminiNav() {
     );
 }
 
-export default GeminiNav;
+export default CustomNav;
