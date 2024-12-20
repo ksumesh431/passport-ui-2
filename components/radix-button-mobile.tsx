@@ -1,15 +1,25 @@
 'use client';
-import React from 'react';
-import { DropdownMenu, Button, Box, Text } from '@radix-ui/themes';
-
-const Rbutton = () => {
+import { DropdownMenu, Tabs, Button, Flex, Link, Text } from '@radix-ui/themes';
+const RbuttonMobile = () => {
     return (
         <>
             <DropdownMenu.Root>
-                <DropdownMenu.Trigger>
-                
-                    <Text weight="bold" size ="2" className="center-items space-x-2 cursor-pointer "><span>Options</span><DropdownMenu.TriggerIcon /></Text>
-        
+                <DropdownMenu.Trigger className="center-items">
+
+
+
+
+
+
+
+
+
+                    <Button color="gray" variant="outline" highContrast >
+                       <Text className="center-items space-x-2 cursor-pointer"><span>Options</span><DropdownMenu.TriggerIcon /></Text> 
+                    </Button>
+
+
+
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>
                     <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
@@ -20,7 +30,7 @@ const Rbutton = () => {
                     <DropdownMenu.Sub>
                         <DropdownMenu.SubTrigger>More</DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent>
-                            <DropdownMenu.Item>Move to project…</DropdownMenu.Item>
+                            <DropdownMenu.Item><Link href="/about">Move to project…</Link></DropdownMenu.Item>
                             <DropdownMenu.Item>Move to folder…</DropdownMenu.Item>
 
                             <DropdownMenu.Separator />
@@ -64,4 +74,4 @@ const Rbutton = () => {
     );
 };
 
-export default Rbutton;
+export default RbuttonMobile;

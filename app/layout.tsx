@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // Make sure your globals.css includes your tailwind directives
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
-
+import CustomNav from "@/components/custom-nav";
+import CustomFooter from '@/components/footer'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,12 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`} // Added gradient-bg here
       >
         <Theme>
+          <CustomNav />
+
           {children}
+          <CustomFooter />
         </Theme>
       </body>
     </html>

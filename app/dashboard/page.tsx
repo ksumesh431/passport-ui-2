@@ -1,97 +1,15 @@
-import React from 'react'
-import Rbutton from '@/components/radix-button'
-import CustomNav from '@/components/custom-nav'
-import CustomFooter from '@/components/footer'
+import {CarouselComponent} from '@/components/carasoul'
+
 const Dashboard = () => {
   return (
     <>
 
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 p-2 max-w-screen-lg mx-auto">
 
-
-
-      <CustomNav />
-      <div className="container mx-auto px-4 py-8 ">
-        <h1 className="text-2xl font-semibold mb-4">Dashboard</h1>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
-        <div className="bg-white rounded-lg shadow-md p-6 border-2 border-red-100">
-          <p className="text-gray-600 ">Welcome to the Dashboard!</p>
-        </div>
+       <CarouselComponent/>
+        
       </div>
-      <CustomFooter />
+
     </>
   )
 }
