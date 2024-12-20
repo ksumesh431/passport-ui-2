@@ -5,8 +5,10 @@ import { FaFacebook, FaTwitter, FaYoutube, FaInstagram, FaLinkedin } from 'react
 
 function CustomFooter() {
   return (
-    <footer className="bg-[#2D2D2D] text-gray-300 py-12">
-      <div className="container mx-auto px-4">
+
+  
+    <footer className="bg-[#2D2D2D] text-gray-300 py-12 mt-auto  ">
+      <div className="container mx-auto px-4 ">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Social Media Section */}
           <div className="space-y-4">

@@ -4,7 +4,7 @@ import "./globals.css"; // Make sure your globals.css includes your tailwind dir
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import CustomNav from "@/components/custom-nav";
-import CustomFooter from '@/components/footer'
+import CustomFooter from "@/components/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,17 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`} // Added gradient-bg here
-      >
-        <Theme>
-          <CustomNav />
-
-          {children}
-          <CustomFooter />
-        </Theme>
+    <html lang="en" className="h-full">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        <div className="contents"> {/* This wrapper helps contain Theme */}
+          <Theme className=" contents"> {/* Using contents to prevent Theme from creating its own box */}
+            <CustomNav />
+            <div className="">{children}</div>
+          </Theme>
+        </div>
+        <CustomFooter />
       </body>
     </html>
   );

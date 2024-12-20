@@ -1,75 +1,93 @@
 'use client';
-import { DropdownMenu, Tabs, Button, Flex, Link, Text } from '@radix-ui/themes';
+import { DropdownMenu, Button, Text, Portal } from '@radix-ui/themes';
+
 const RbuttonMobile = () => {
     return (
         <>
             <DropdownMenu.Root>
                 <DropdownMenu.Trigger className="center-items">
-
-
-
-
-
-
-
-
-
-                    <Button color="gray" variant="outline" highContrast >
-                       <Text className="center-items space-x-2 cursor-pointer"><span>Options</span><DropdownMenu.TriggerIcon /></Text> 
+                    <Button variant="soft" highContrast>
+                        <Text className="center-items space-x-2 cursor-pointer">
+                            <span>Options</span>
+                            <DropdownMenu.TriggerIcon />
+                        </Text>
                     </Button>
-
-
-
                 </DropdownMenu.Trigger>
-                <DropdownMenu.Content>
-                    <DropdownMenu.Item shortcut="⌘ E">Edit</DropdownMenu.Item>
-                    <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
-                    <DropdownMenu.Separator />
-                    <DropdownMenu.Item shortcut="⌘ N">Archive</DropdownMenu.Item>
+                <Portal>
+                    <DropdownMenu.Content
+                        style={{
+                            zIndex: 1000, // Ensure it's above other content
+                            maxHeight: '90vh', // Prevents large dropdowns from overflowing the viewport
+                            overflow: 'auto', // Makes it scrollable if needed
+                            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                        }}
+                    >
+                        {/* New Applications */}
+                        <DropdownMenu.Sub>
+                            <DropdownMenu.SubTrigger>New Applications</DropdownMenu.SubTrigger>
+                            <DropdownMenu.SubContent
+                                sideOffset={-130} // Adjust horizontal alignment
+                                style={{
+                                    zIndex: 1100, // Higher than parent content
+                                    background: 'white', // Background for visibility
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
+                                }}
+                            >
+                                <DropdownMenu.Item>New Passport (India/Canada)</DropdownMenu.Item>
+                                <DropdownMenu.Item>Passport Renewal (India/Canada)</DropdownMenu.Item>
+                                <DropdownMenu.Item>PCC (Middle-east/India/Canada)</DropdownMenu.Item>
+                                <DropdownMenu.Item>OCI Applications</DropdownMenu.Item>
+                                <DropdownMenu.Item>Surrender Certificate</DropdownMenu.Item>
+                                <DropdownMenu.Item>PR Card Renewal</DropdownMenu.Item>
+                                <DropdownMenu.Item>Visitor Visa Applications</DropdownMenu.Item>
+                                <DropdownMenu.Item>Driving Extract</DropdownMenu.Item>
+                            </DropdownMenu.SubContent>
+                        </DropdownMenu.Sub>
 
-                    <DropdownMenu.Sub>
-                        <DropdownMenu.SubTrigger>More</DropdownMenu.SubTrigger>
-                        <DropdownMenu.SubContent>
-                            <DropdownMenu.Item><Link href="/about">Move to project…</Link></DropdownMenu.Item>
-                            <DropdownMenu.Item>Move to folder…</DropdownMenu.Item>
+                        {/* Translation Services */}
+                        <DropdownMenu.Sub>
+                            <DropdownMenu.SubTrigger>Translation Services</DropdownMenu.SubTrigger>
+                            <DropdownMenu.SubContent>
+                                <DropdownMenu.Item>Documents</DropdownMenu.Item>
+                                <DropdownMenu.Item>Whatsapp Chat</DropdownMenu.Item>
+                            </DropdownMenu.SubContent>
+                        </DropdownMenu.Sub>
 
-                            <DropdownMenu.Separator />
-                            <DropdownMenu.Item>Advanced options…</DropdownMenu.Item>
+                        {/* Notary Services */}
+                        <DropdownMenu.Sub>
+                            <DropdownMenu.SubTrigger>Notary Services</DropdownMenu.SubTrigger>
+                            <DropdownMenu.SubContent
+                                sideOffset={-130} // Adjust horizontal alignment
+                                style={{
+                                    zIndex: 1100, // Higher than parent content
+                                    background: 'white', // Background for visibility
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
+                                }}
+                            >
+                                <DropdownMenu.Item>Affidavits</DropdownMenu.Item>
+                                <DropdownMenu.Item>Document Notarization</DropdownMenu.Item>
+                            </DropdownMenu.SubContent>
+                        </DropdownMenu.Sub>
 
-                            {/* First Nested Submenu */}
-                            <DropdownMenu.Sub>
-                                <DropdownMenu.SubTrigger>NestedMore</DropdownMenu.SubTrigger>
-                                <DropdownMenu.SubContent>
-                                    <DropdownMenu.Item>Nested Option 1</DropdownMenu.Item>
-                                    <DropdownMenu.Item>Nested Option 2</DropdownMenu.Item>
-                                    <DropdownMenu.Separator />
-                                    <DropdownMenu.Item>Nested Option 3</DropdownMenu.Item>
+                        {/* Power of Attorney (POA) */}
+                        <DropdownMenu.Sub>
+                            <DropdownMenu.SubTrigger>Power of Attorney (POA)</DropdownMenu.SubTrigger>
+                            <DropdownMenu.SubContent>
+                                <DropdownMenu.Item>General POA</DropdownMenu.Item>
+                                <DropdownMenu.Item>Specific POA</DropdownMenu.Item>
+                            </DropdownMenu.SubContent>
+                        </DropdownMenu.Sub>
 
-                                    {/* Second Nested Submenu */}
-                                    <DropdownMenu.Sub>
-                                        <DropdownMenu.SubTrigger>DeepNestedMore</DropdownMenu.SubTrigger>
-                                        <DropdownMenu.SubContent>
-                                            <DropdownMenu.Item>Deep Option 1</DropdownMenu.Item>
-                                            <DropdownMenu.Item>Deep Option 2</DropdownMenu.Item>
-                                            <DropdownMenu.Separator />
-                                            <DropdownMenu.Item>Deep Option 3</DropdownMenu.Item>
-                                        </DropdownMenu.SubContent>
-                                    </DropdownMenu.Sub>
-                                </DropdownMenu.SubContent>
-                            </DropdownMenu.Sub>
-                        </DropdownMenu.SubContent>
-                    </DropdownMenu.Sub>
-
-                    <DropdownMenu.Separator />
-                    <DropdownMenu.Item>Share</DropdownMenu.Item>
-                    <DropdownMenu.Item>Add to favorites</DropdownMenu.Item>
-                    <DropdownMenu.Separator />
-                    <DropdownMenu.Item shortcut="⌘ ⌫" color="red">
-                        Delete
-                    </DropdownMenu.Item>
-                </DropdownMenu.Content>
+                        {/* Run Away Marriages */}
+                        <DropdownMenu.Sub>
+                            <DropdownMenu.SubTrigger>Run Away Marriages</DropdownMenu.SubTrigger>
+                            <DropdownMenu.SubContent>
+                                <DropdownMenu.Item>In Middle-east</DropdownMenu.Item>
+                            </DropdownMenu.SubContent>
+                        </DropdownMenu.Sub>
+                    </DropdownMenu.Content>
+                </Portal>
             </DropdownMenu.Root>
-
         </>
     );
 };

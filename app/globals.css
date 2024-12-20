@@ -2,16 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #928e8e;
-  --foreground: #171717;
-}
 
-
-
-body {
-  background: var(--background);
-}
 
 /* Custom Classes */
 .d-red {
