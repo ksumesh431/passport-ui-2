@@ -38,7 +38,7 @@ const AboutPage = () => {
               services, any kind of Notary services, need help with drafting of a Power of Attorney, 
               is not sure of how to do a new application for visa, PCC, a business needing to legalize 
               corporate documents, or an organization seeking to meet international regulatory standards, 
-              DocoAid is here to guide you every step of the way.
+              we&apos;re here to guide you every step of the way.
             </p>
           </div>
         </div>

@@ -1,43 +1,5 @@
-// "use client";
-
-// import { Carousel } from "flowbite-react";
-
-// export function CarouselComponent() {
-//   return (
-//     <div className="max-w-screen-2xl mx-auto px-4 py-6 ">
-//       <Carousel
-//         pauseOnHover
-
-//         className="h-96 sm:h-[400px] lg:h-[500px] xl:h-[600px] rounded-lg"
-//       >
-//         <img
-//           src="usa.jpg"
-//           alt="USA"
-//           className="object-cover"
-//         />
-//         <img
-//           src="uk.jpg"
-//           alt="UK"
-//           className="object-cover"
-//         />
-//         <img
-//           src="canada.jpg"
-//           alt="Canada"
-//           className="object-cover"
-//         />
-//         <img
-//           src="aus.jpg"
-//           alt="Australia"
-//           className="object-cover"
-//         />
-//       </Carousel>
-//     </div>
-//   );
-// }
-
-
 "use client";
-
+import { basePath } from '@/utils/config';
 import { Carousel } from "flowbite-react";
 
 export function CarouselComponent() {
@@ -49,7 +11,7 @@ export function CarouselComponent() {
       >
         <div className="relative w-full h-full">
           <img
-            src="usa.jpg"
+            src={`${basePath}/usa.jpg`}
             alt="USA"
             className="object-cover w-full h-full"
           />
@@ -61,7 +23,7 @@ export function CarouselComponent() {
 
         <div className="relative w-full h-full">
           <img
-            src="uk.jpg"
+            src={`${basePath}/uk.jpg`}
             alt="UK"
             className="object-cover w-full h-full"
           />
@@ -73,7 +35,7 @@ export function CarouselComponent() {
 
         <div className="relative w-full h-full">
           <img
-            src="canada.jpg"
+            src={`${basePath}/canada.jpg`}
             alt="Canada"
             className="object-cover w-full h-full"
           />
@@ -85,7 +47,7 @@ export function CarouselComponent() {
 
         <div className="relative w-full h-full">
           <img
-            src="aus.jpg"
+            src={`${basePath}/aus.jpg`}
             alt="Australia"
             className="object-cover w-full h-full"
           />

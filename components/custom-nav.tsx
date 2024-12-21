@@ -5,6 +5,7 @@ import { Button, Text, } from '@radix-ui/themes';
 import Rbutton from './radix-button';
 import RbuttonMobile from './radix-button-mobile';
 import Link from 'next/link';
+import { basePath } from '@/utils/config';
 
 function CustomNav() {
     const menuClassNames = "center-items space-x-2 cursor-pointer select-none";
@@ -51,7 +52,7 @@ function CustomNav() {
                 <div className="flex items-center space-x-8">
                     {/* Icon/logo div */}
                     <div className="flex items-center">
-                        <Link href="/dashboard"><img src="logo.jpeg" className="h-12 w-auto" alt="Docoaid Logo" /> </Link>
+                        <Link href="/dashboard"><img src={`${basePath}/logo.jpeg`} className="h-12 w-auto" alt="Docoaid Logo" /> </Link>
                     </div>
 
                     {/* Desktop menu */}
