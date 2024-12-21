@@ -44,6 +44,10 @@ function CustomNav() {
         console.log('Toggle menu', !isMenuOpen);
         setIsMenuOpen(!isMenuOpen);
     };
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
 
     return (
         <nav className="bg-white text-black sticky top-0 z-30 shadow-md ">
@@ -71,14 +75,6 @@ function CustomNav() {
                         <Rbutton />
 
                         <Text {...menuTextProps}>
-                            <Link href="/about"><span>Blogs</span></Link>
-
-                        </Text>
-                        <Text {...menuTextProps}>
-                            <Link href="/about"><span>Testimonials</span></Link>
-
-                        </Text>
-                        <Text {...menuTextProps}>
                             <Link href="/contactus"><span>Contact Us</span></Link>
 
                         </Text>
@@ -105,14 +101,30 @@ function CustomNav() {
                     }`}
             >
                 <div className="flex flex-col space-y-3">
-                    <Button variant="soft" highContrast><Link href="/dashboard">Home</Link></Button>
-                    <RbuttonMobile />
-                    <Button variant="soft" highContrast><Link href="/about">About Us</Link></Button>
-                    <Button variant="soft" highContrast><Link href="/about">Blogs</Link></Button>
-                    <Button variant="soft" highContrast><Link href="/about">Testimonials</Link></Button>
-                    <Button variant="soft" highContrast><Link href="/contactus">Contact Us</Link></Button>
+                    <Button
+                        variant="soft"
+                        highContrast
+                        onClick={closeMenu}
+                    >
+                        <Link href="/dashboard">Home</Link>
+                    </Button>
 
+                    <RbuttonMobile closeParentMenu={closeMenu}/>
 
+                    <Button
+                        variant="soft"
+                        highContrast
+                        onClick={closeMenu}
+                    >
+                        <Link href="/about">About Us</Link>
+                    </Button>
+                    <Button
+                        variant="soft"
+                        highContrast
+                        onClick={closeMenu}
+                    >
+                        <Link href="/contactus">Contact Us</Link>
+                    </Button>
                 </div>
             </div>
         </nav>

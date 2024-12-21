@@ -3,9 +3,20 @@ import React, { useState } from 'react';
 import { DropdownMenu, Button, Text, Portal } from '@radix-ui/themes';
 import Link from 'next/link';
 
-const RbuttonMobile = () => {
+interface RbuttonMobileProps {
+    closeParentMenu: () => void; // Prop to close the parent menu
+}
+
+
+const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
     const [isOpen, setIsOpen] = useState(false);
     const closeDropdown = () => setIsOpen(false);
+
+    const handleItemClick = () => {
+        closeDropdown();        // Close the current dropdown
+        closeParentMenu();      // Close the parent menu (from CustomNav)
+    };
+
     const dropdownItemStyles = "";
     return (
         <>
@@ -28,7 +39,7 @@ const RbuttonMobile = () => {
                         }}
                     >
                         {/* IELTS Coaching */}
-                        <DropdownMenu.Item onClick={closeDropdown}>
+                        <DropdownMenu.Item onClick={handleItemClick}>
                             <Link href="/ieltsCoaching" className="w-full">
                                 IELTS Coaching
                             </Link>
@@ -46,47 +57,47 @@ const RbuttonMobile = () => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/">New Passport (India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/newApplications/passportRenewals">Passport Renewal (India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/newApplications/PCC">PCC (Middle-east/India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/newApplications/OCIApplications">OCI Applications</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/">Surrender Certificate</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/">PR Card Renewal</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/newApplications/visaApplications">Visitor Visa Applications</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/newApplications/drivingExtracts">Driving Extract</Link>
                                 </DropdownMenu.Item>
 
 
-                                <DropdownMenu.Item onClick={closeDropdown}>
+                                <DropdownMenu.Item onClick={handleItemClick}>
                                     <Link href="/newApplications/consentLetter">Child Travel Consent</Link>
                                 </DropdownMenu.Item>
 
@@ -105,8 +116,8 @@ const RbuttonMobile = () => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/documents">Documents</Link></DropdownMenu.Item>
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat">Whatsapp Chat</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/translationServices/documents">Documents</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat">Whatsapp Chat</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -121,8 +132,8 @@ const RbuttonMobile = () => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/affidavits">Affidavits</Link> </DropdownMenu.Item>
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization">Document Notarization</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/notaryServices/affidavits">Affidavits</Link> </DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization">Document Notarization</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -137,8 +148,8 @@ const RbuttonMobile = () => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/generalPOA">General POA</Link></DropdownMenu.Item>
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/specificPOA">Specific POA</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/poa/generalPOA">General POA</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/poa/specificPOA">Specific POA</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -153,7 +164,7 @@ const RbuttonMobile = () => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}> <Link href="/">In Middle-east</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/">In Middle-east</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
                     </DropdownMenu.Content>
