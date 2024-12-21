@@ -1,14 +1,19 @@
 'use client';
+import React, { useState } from 'react';
 import { DropdownMenu, Button, Text, Portal } from '@radix-ui/themes';
+import Link from 'next/link';
 
 const RbuttonMobile = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const closeDropdown = () => setIsOpen(false);
+    const dropdownItemStyles = "";
     return (
         <>
-            <DropdownMenu.Root>
+            <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
                 <DropdownMenu.Trigger className="center-items">
                     <Button variant="soft" highContrast>
                         <Text className="center-items space-x-2 cursor-pointer">
-                            <span>Options</span>
+                            <span>Services</span>
                             <DropdownMenu.TriggerIcon />
                         </Text>
                     </Button>
@@ -22,6 +27,14 @@ const RbuttonMobile = () => {
                             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                         }}
                     >
+                        {/* IELTS Coaching */}
+                        <DropdownMenu.Item onClick={closeDropdown}>
+                            <Link href="/ieltsCoaching" className="w-full">
+                                IELTS Coaching
+                            </Link>
+                        </DropdownMenu.Item>
+
+
                         {/* New Applications */}
                         <DropdownMenu.Sub>
                             <DropdownMenu.SubTrigger>New Applications</DropdownMenu.SubTrigger>
@@ -33,23 +46,67 @@ const RbuttonMobile = () => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item>New Passport (India/Canada)</DropdownMenu.Item>
-                                <DropdownMenu.Item>Passport Renewal (India/Canada)</DropdownMenu.Item>
-                                <DropdownMenu.Item>PCC (Middle-east/India/Canada)</DropdownMenu.Item>
-                                <DropdownMenu.Item>OCI Applications</DropdownMenu.Item>
-                                <DropdownMenu.Item>Surrender Certificate</DropdownMenu.Item>
-                                <DropdownMenu.Item>PR Card Renewal</DropdownMenu.Item>
-                                <DropdownMenu.Item>Visitor Visa Applications</DropdownMenu.Item>
-                                <DropdownMenu.Item>Driving Extract</DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/">New Passport (India/Canada)</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/newApplications/passportRenewals">Passport Renewal (India/Canada)</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/newApplications/PCC">PCC (Middle-east/India/Canada)</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/newApplications/OCIApplications">OCI Applications</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/">Surrender Certificate</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/">PR Card Renewal</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/newApplications/visaApplications">Visitor Visa Applications</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/newApplications/drivingExtracts">Driving Extract</Link>
+                                </DropdownMenu.Item>
+
+
+                                <DropdownMenu.Item onClick={closeDropdown}>
+                                    <Link href="/newApplications/consentLetter">Child Travel Consent</Link>
+                                </DropdownMenu.Item>
+
+
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
                         {/* Translation Services */}
                         <DropdownMenu.Sub>
                             <DropdownMenu.SubTrigger>Translation Services</DropdownMenu.SubTrigger>
-                            <DropdownMenu.SubContent>
-                                <DropdownMenu.Item>Documents</DropdownMenu.Item>
-                                <DropdownMenu.Item>Whatsapp Chat</DropdownMenu.Item>
+                            <DropdownMenu.SubContent
+                                sideOffset={-100} // Adjust horizontal alignment
+                                style={{
+                                    zIndex: 1100, // Higher than parent content
+                                    background: 'white', // Background for visibility
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
+                                }}
+                            >
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/documents">Documents</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat">Whatsapp Chat</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -57,32 +114,46 @@ const RbuttonMobile = () => {
                         <DropdownMenu.Sub>
                             <DropdownMenu.SubTrigger>Notary Services</DropdownMenu.SubTrigger>
                             <DropdownMenu.SubContent
-                                sideOffset={-130} // Adjust horizontal alignment
+                                sideOffset={-100} // Adjust horizontal alignment
                                 style={{
                                     zIndex: 1100, // Higher than parent content
                                     background: 'white', // Background for visibility
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item>Affidavits</DropdownMenu.Item>
-                                <DropdownMenu.Item>Document Notarization</DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/affidavits">Affidavits</Link> </DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization">Document Notarization</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
                         {/* Power of Attorney (POA) */}
                         <DropdownMenu.Sub>
                             <DropdownMenu.SubTrigger>Power of Attorney (POA)</DropdownMenu.SubTrigger>
-                            <DropdownMenu.SubContent>
-                                <DropdownMenu.Item>General POA</DropdownMenu.Item>
-                                <DropdownMenu.Item>Specific POA</DropdownMenu.Item>
+                            <DropdownMenu.SubContent
+                                sideOffset={-100} // Adjust horizontal alignment
+                                style={{
+                                    zIndex: 1100, // Higher than parent content
+                                    background: 'white', // Background for visibility
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
+                                }}
+                            >
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/generalPOA">General POA</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/specificPOA">Specific POA</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
                         {/* Run Away Marriages */}
                         <DropdownMenu.Sub>
                             <DropdownMenu.SubTrigger>Run Away Marriages</DropdownMenu.SubTrigger>
-                            <DropdownMenu.SubContent>
-                                <DropdownMenu.Item>In Middle-east</DropdownMenu.Item>
+                            <DropdownMenu.SubContent
+                                sideOffset={-100} // Adjust horizontal alignment
+                                style={{
+                                    zIndex: 1100, // Higher than parent content
+                                    background: 'white', // Background for visibility
+                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
+                                }}
+                            >
+                                <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}> <Link href="/">In Middle-east</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
                     </DropdownMenu.Content>
