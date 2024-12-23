@@ -50,38 +50,37 @@ function CustomNav() {
 
 
     return (
-        <nav className="bg-white text-black sticky top-0 z-30 shadow-md ">
-            <div className="container mx-auto px-4 py-2 flex justify-center items-center">
-                {/* Left side (Logo + Menu items) */}
-                <div className="flex items-center space-x-8">
-                    {/* Icon/logo div */}
-                    <div className="flex items-center">
-                        <Link href="/dashboard"><img src={`${basePath}/logo.jpeg`} className="h-12 w-auto" alt="Docoaid Logo" /> </Link>
-                    </div>
-
-                    {/* Desktop menu */}
-                    <div className="hidden md:flex space-x-9">
-
-                        <Text {...menuTextProps}>
-                            <Link href="/dashboard"><span>Home</span></Link>
-
-                        </Text>
-                        <Text {...menuTextProps}>
-                            <Link href="/about"><span>About Us</span></Link>
-
-                        </Text>
-
-                        {/* Services */}
-                        <Rbutton />
-
-                        <Text {...menuTextProps}>
-                            <Link href="/contactus"><span>Contact Us</span></Link>
-
-                        </Text>
-
-
-                    </div>
+        <nav className="bg-indigo-900 text-white sticky top-0 z-30 shadow-md">
+            <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+                {/* Icon/logo div */}
+                
+                <div className="flex items-center">
+                    <Link href="/dashboard">
+                        <img
+                            src={`${basePath}/logo.jpeg`}
+                            className="h-10 w-auto drop-shadow-lg rounded-xl filter bg-white p-1"
+                            alt="Docoaid Logo"
+                        />
+                    </Link>
                 </div>
+
+                {/* Desktop menu */}
+                <div className="hidden md:flex items-center space-x-9">
+                    <Text {...menuTextProps}>
+                        <Link href="/dashboard"><span>Home</span></Link>
+                    </Text>
+                    <Text {...menuTextProps}>
+                        <Link href="/about"><span>About Us</span></Link>
+                    </Text>
+
+                    {/* Services */}
+                    <Rbutton />
+
+                    <Text {...menuTextProps}>
+                        <Link href="/contactus"><span>Contact Us</span></Link>
+                    </Text>
+                </div>
+
 
                 {/* Hamburger button */}
                 <button
@@ -109,7 +108,7 @@ function CustomNav() {
                         <Link href="/dashboard">Home</Link>
                     </Button>
 
-                    <RbuttonMobile closeParentMenu={closeMenu}/>
+                    <RbuttonMobile closeParentMenu={closeMenu} />
 
                     <Button
                         variant="soft"

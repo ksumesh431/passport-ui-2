@@ -71,7 +71,7 @@ const Contacts = () => {
                 <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
                     <div className="text-center mb-6">
                         <h2 className="text-2xl font-bold text-indigo-900">DOCUMENT SERVICES – ONTARIO</h2>
-                        <p className="text-lg mt-2">Phone: 437-350-2555</p>
+                        <p className="text-lg mt-2">Phone: +1 (437) 350-2555</p>
                         <p className="text-lg">Email: info@docoaid.com</p>
                     </div>
                 </div>

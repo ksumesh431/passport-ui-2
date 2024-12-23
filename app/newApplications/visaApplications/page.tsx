@@ -1,23 +1,24 @@
 import Link from 'next/link';
-
 export default function VisaPage() {
   return (
-    <main className="min-h-screen bg-gray-50 pb-16">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-indigo-800 to-indigo-900 text-white py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">Visa Application Assistance</h1>
-          <p className="text-xl opacity-90">
-            Simplify Your Visa Application Process with DocoAid
+    <main className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
+      {/* Hero Section with Overlap */}
+      <div className="relative mb-16">
+        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">Visa Application Assistance</h1>
+            <p className="text-xl opacity-90">
+              Simplify Your Visa Application Process with DocoAid
+            </p>
+          </div>
+        </div>
+
+        {/* Overlapping Introduction Card */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
+          <p className="text-lg text-gray-700">
+            Planning to travel abroad for business, study, vacation, or family matters? Navigating the visa application process can be complex and time-consuming, but DocoAid is here to guide you every step of the way. Whether you're applying for a tourist visa, business visa, student visa, or any other type, our team of experts is ready to provide personalized support and ensure your application is accurate, complete, and submitted on time.
           </p>
         </div>
-      </div>
-
-      {/* Overlapping Introduction Card */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
-        <p className="text-lg text-gray-700">
-          Planning to travel abroad for business, study, vacation, or family matters? Navigating the visa application process can be complex and time-consuming, but DocoAid is here to guide you every step of the way. Whether you're applying for a tourist visa, business visa, student visa, or any other type, our team of experts is ready to provide personalized support and ensure your application is accurate, complete, and submitted on time.
-        </p>
       </div>
 
       {/* Main Content */}

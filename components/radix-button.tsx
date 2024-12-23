@@ -84,7 +84,7 @@ const Rbutton = () => {
                     <DropdownMenu.Sub>
                         <DropdownMenu.SubTrigger>Run Away Marriages</DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>In Middle-east</DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/">Middle-east</Link></DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
                 </DropdownMenu.Content>

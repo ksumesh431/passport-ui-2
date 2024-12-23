@@ -2,23 +2,26 @@ import Link from 'next/link';
 
 export default function ConsentLetterPage() {
     return (
-        <main className="min-h-screen bg-gray-50 pb-16">
-            {/* Hero Section */}
-            <div className="bg-gradient-to-br from-indigo-800 to-indigo-900 text-white py-16">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-3">Consent Letter for Children Traveling Outside Canada</h1>
-                    <p className="text-xl opacity-90">
-                        Smooth and Stress-Free Travel for Your Children with DocoAid's Consent Letter Services
-                    </p>
-                </div>
+      <main className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
+        {/* Hero Section with Overlap */}
+        <div className="relative mb-16">
+          <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-3">Travel Consent Letter Services</h1>
+              <p className="text-xl opacity-90">
+                Smooth and Stress-Free Travel for Your Children with DocoAid's Consent Letter Services
+              </p>
             </div>
-
-            {/* Overlapping Introduction Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
-                <p className="text-lg text-gray-700">
-                    Traveling outside Canada with children often requires a Consent Letter, especially if only one parent, guardians, or other relatives are accompanying the child. A properly drafted and legally binding consent letter ensures that the child's travel is safe, authorized, and hassle-free. At DocoAid, we specialize in preparing and notarizing consent letters for children traveling internationally, ensuring that your family's travel experience is smooth and worry-free.
-                </p>
-            </div>
+          </div>
+  
+          {/* Overlapping Introduction Card */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
+            <p className="text-lg text-gray-700">
+              Traveling outside Canada with children often requires a Consent Letter, especially if only one parent, guardians, or other relatives are accompanying the child. A properly drafted and legally binding consent letter ensures that the child's travel is safe, authorized, and hassle-free. At DocoAid, we specialize in preparing and notarizing consent letters for children traveling internationally, ensuring that your family's travel experience is smooth and worry-free.
+            </p>
+          </div>
+        </div>
+  
 
             {/* Main Content */}
             <div className="max-w-5xl mx-auto space-y-8 mt-8 px-4">

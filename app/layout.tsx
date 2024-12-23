@@ -27,15 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <head>
-        {/* Add viewport meta tag to set 125% zoom */}
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.25, maximum-scale=1.25, user-scalable=no"
-        />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-[#f9fafb]`}>
-        <div className="contents">
+        <div className="contents desktop-zoom">
           <Theme className="contents"> {/* Using contents to prevent Theme from creating its own box */}
             <CustomNav />
             <div >{children}</div>

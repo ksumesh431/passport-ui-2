@@ -1,23 +1,24 @@
 import Link from 'next/link';
-
 export default function DrivingExtractsPage() {
   return (
-    <main className="min-h-screen bg-gray-50 pb-16">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-indigo-800 to-indigo-900 text-white py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">Driving Extract Services</h1>
-          <p className="text-xl opacity-90">
-            Professional Assistance in Obtaining Your Driving Records
+    <main className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
+      {/* Hero Section with Overlap */}
+      <div className="relative mb-16">
+        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">Driving Extract Application Services</h1>
+            <p className="text-xl opacity-90">
+              Professional Assistance for Obtaining Your Driving Extract
+            </p>
+          </div>
+        </div>
+
+        {/* Overlapping Introduction Card */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
+          <p className="text-lg text-gray-700">
+            Need a driving extract for immigration, visa applications, or other official purposes? DocoAid provides expert assistance in obtaining your driving extract quickly and efficiently. Our team handles all the paperwork and bureaucratic processes, ensuring you receive your document without any hassles.
           </p>
         </div>
-      </div>
-
-      {/* Overlapping Introduction Card */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
-        <p className="text-lg text-gray-700">
-          Driving Extracts refer to official documents that summarize an individual's driving history, including records of traffic violations, licenses held, accidents, and other relevant driving details. These documents are often requested for various purposes such as visa applications, insurance, legal matters, or when moving to a new country to apply for a local driving license.
-        </p>
       </div>
 
       {/* Main Content */}

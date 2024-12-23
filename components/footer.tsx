@@ -11,14 +11,14 @@ function CustomFooter() {
           </h3>
           <div className="space-y-2 font-light">
             <p className="hover:text-white transition-colors">
-              <span className="text-gray-400">Email:</span> info@DocoAid.com
+              <span className="text-gray-400">Email:</span> info@docoaid.com
             </p>
             <p className="hover:text-white transition-colors">
               <span className="text-gray-400">Phone:</span> 437-350-2555
             </p>
           </div>
           <div className="border-t border-gray-700/50 mt-6 pt-6">
-            <p className="text-sm text-gray-400">©2024 DocoAid. All rights reserved.</p>
+            <p className="text-sm text-gray-400">Copyright ©2024 DocoAid. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                 <Portal>
                     <DropdownMenu.Content
                         style={{
-                            zIndex: 1000, // Ensure it's above other content
+                            zIndex: 1100, // Ensure it's above other content
                             maxHeight: '90vh', // Prevents large dropdowns from overflowing the viewport
                             overflow: 'auto', // Makes it scrollable if needed
                             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -164,7 +164,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/">In Middle-east</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/">Middle-east</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
                     </DropdownMenu.Content>

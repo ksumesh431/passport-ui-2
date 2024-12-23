@@ -1,29 +1,49 @@
 'use client';
-import { useState } from "react";
-import { FaLaptopCode, FaUsers, FaChalkboardTeacher } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { FaUsers, FaShieldAlt, FaHandshake, FaTasks, FaGlobe, FaStar, FaLock, FaRocket } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const Carousel = () => {
     const cards = [
         {
-            icon: <FaLaptopCode />,
-            title: "NOTARY",
-            description: "Comprehensive services for all notary requirements.",
+            icon: <FaShieldAlt />,
+            title: "Why Should You Pick DocoAid?",
+            description: "Expertise You Can Trust. DocoAid is backed by a team of highly experienced agents with years of expertise in the fields of document verification, authentication, and legalization.",
+        },
+        {
+            icon: <FaHandshake />,
+            title: "Tailored Services for Every Need",
+            description: "We understand that each client has unique requirements. We provide customized solutions to fit your specific needs for translation, notary services, and document legalization.",
+        },
+        {
+            icon: <FaTasks />,
+            title: "End-to-End Solutions",
+            description: "From start to finish, DocoAid provides comprehensive support. Our services cover everything from initial consultations to document authentication and legalization.",
+        },
+        {
+            icon: <FaLock />,
+            title: "Efficient and Secure Services",
+            description: "At DocoAid, efficiency is a priority. We deliver fast, reliable services while maintaining the highest levels of security for your sensitive documents.",
+        },
+        {
+            icon: <FaGlobe />,
+            title: "Comprehensive Global Expertise",
+            description: "Whether you need assistance for international travel, business expansion, or complying with global regulations, DocoAid's services meet international standards.",
         },
         {
             icon: <FaUsers />,
-            title: "EMBASSY SERVICES",
-            description: "Professional assistance with embassy-related services.",
+            title: "Client-Centric Approach",
+            description: "Our mission is to help you achieve your goals by providing excellent service that's tailored to your needs, with transparency and clear communication.",
         },
         {
-            icon: <FaChalkboardTeacher />,
-            title: "FEDERAL CERTIFICATION",
-            description: "Flexible and accredited federal certification programs.",
+            icon: <FaStar />,
+            title: "Reputation for Reliability",
+            description: "DocoAid has built a solid reputation for being a reliable partner for all your documentation needs, with a proven track record in the industry.",
         },
         {
-            icon: <FaChalkboardTeacher />,
-            title: "PROVINCIAL",
-            description: "Provincial certifications tailored to your needs.",
+            icon: <FaRocket />,
+            title: "Simplifying Your Path to Success",
+            description: "DocoAid simplifies the paperwork process, ensuring you are well-prepared to navigate life's important milestones with confidence and ease.",
         },
     ];
 
@@ -44,7 +64,7 @@ const Carousel = () => {
 
     const getVisibleCards = () => {
         const visibleCards = [];
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 5; i++) {
             const index = (currentIndex + i) % cards.length;
             visibleCards.push({ ...cards[index], index });
         }
@@ -53,13 +73,14 @@ const Carousel = () => {
 
     const cardVariants = {
         enter: (direction: number) => ({
-            x: direction > 0 ? 1000 : -1000,
+            x: direction > 0 ? 300 : -300,
             opacity: 0,
-            scale: 0.5,
+            scale: 0.8,
             transition: {
-                duration: 0.3,
-                type: "tween",
-                ease: "easeInOut"
+                duration: 0.4,
+                type: "spring",
+                stiffness: 300,
+                damping: 30
             },
         }),
         center: {
@@ -67,25 +88,45 @@ const Carousel = () => {
             opacity: 1,
             scale: 1,
             transition: {
-                duration: 0.3,
-                type: "tween",
-                ease: "easeInOut"
+                duration: 0.4,
+                type: "spring",
+                stiffness: 300,
+                damping: 30
             },
         },
         exit: (direction: number) => ({
-            x: direction > 0 ? -1000 : 1000,
+            x: direction > 0 ? -300 : 300,
             opacity: 0,
-            scale: 0.5,
+            scale: 0.8,
             transition: {
-                duration: 0.3,
-                type: "tween",
-                ease: "easeInOut"
+                duration: 0.4,
+                type: "spring",
+                stiffness: 300,
+                damping: 30
             },
         }),
     };
 
+
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        if (isHovered) return; // Don't auto-slide while hovering
+
+        const autoSlideTimer = setInterval(() => {
+            handleNext();
+        }, 5000);
+
+        return () => clearInterval(autoSlideTimer);
+    }, [isHovered]);
+
+    // for auto slide
+
     return (
-        <div className="p-10">
+        <div className="p-10 overflow-hidden "
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
             <div className="flex justify-center items-center mb-10 space-x-6">
                 <h1 className="text-3xl font-bold">Why Should You Pick Docoaid?</h1>
                 <motion.button
@@ -106,7 +147,7 @@ const Carousel = () => {
                 </motion.button>
             </div>
 
-            <div className="relative w-full flex justify-center items-center overflow-hidden">
+            <div className="relative min-w-fit flex justify-center items-center">
                 <div className="flex space-x-4 overflow-hidden">
                     <AnimatePresence initial={false} custom={direction} mode="popLayout">
                         {getVisibleCards().map((card, idx) => (

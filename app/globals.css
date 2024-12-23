@@ -44,14 +44,9 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Default zoom for mobile devices and tablets */
-html {
-  font-size: 100%; /* Default size for mobile */
-}
 
-/* Zoom for desktop (125%) */
-@media (min-width: 1024px) {
-  html {
-    font-size: 125%; /* Increase font size by 25% on desktop */
+@media screen and (min-width: 1024px) {
+  .desktop-zoom {
+    zoom: 125%;
   }
 }

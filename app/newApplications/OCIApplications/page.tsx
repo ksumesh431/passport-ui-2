@@ -2,25 +2,27 @@ import Link from 'next/link';
 
 export default function OCIPage() {
   return (
-    <main className="min-h-screen bg-gray-50 pb-16">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-indigo-800 to-indigo-900 text-white py-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">OCI Application Assistance by DocoAid</h1>
-          <p className="text-xl opacity-90">
-            Secure Your Overseas Citizenship of India (OCI) with DocoAid's Expert Help
+    <main className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
+      {/* Hero Section with Overlap */}
+      <div className="relative mb-16">
+        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">OCI Application Assistance by DocoAid</h1>
+            <p className="text-xl opacity-90">
+              Secure Your Overseas Citizenship of India (OCI) with DocoAid's Expert Help
+            </p>
+          </div>
+        </div>
+
+        {/* Overlapping Introduction Card */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
+          <p className="text-lg text-gray-700">
+            The Overseas Citizenship of India (OCI) card is an important document for people of Indian origin who have acquired citizenship in a foreign country. The OCI provides several benefits, including visa-free travel to India, ease of business, and the ability to own property. However, the process of applying for an OCI can be complex and requires accurate documentation and careful attention to detail.
+          </p>
+          <p className="text-lg text-gray-700 mt-4">
+            At DocoAid, we specialize in providing professional assistance for OCI applications. Whether you're applying for the first time or renewing your OCI, we guide you through every step of the process, ensuring your application is complete, correct, and submitted on time.
           </p>
         </div>
-      </div>
-
-      {/* Overlapping Introduction Card */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
-        <p className="text-lg text-gray-700">
-          The Overseas Citizenship of India (OCI) card is an important document for people of Indian origin who have acquired citizenship in a foreign country. The OCI provides several benefits, including visa-free travel to India, ease of business, and the ability to own property. However, the process of applying for an OCI can be complex and requires accurate documentation and careful attention to detail.
-        </p>
-        <p className="text-lg text-gray-700 mt-4">
-          At DocoAid, we specialize in providing professional assistance for OCI applications. Whether you're applying for the first time or renewing your OCI, we guide you through every step of the process, ensuring your application is complete, correct, and submitted on time.
-        </p>
       </div>
 
       {/* Main Content */}
