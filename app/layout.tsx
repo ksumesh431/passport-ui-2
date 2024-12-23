@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full no-scrollbar">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-[#f9fafb]`}>
         <div className="contents desktop-zoom">
           <Theme className="contents"> {/* Using contents to prevent Theme from creating its own box */}
