@@ -123,7 +123,7 @@ const Carousel = () => {
     // for auto slide
 
     return (
-        <div className="p-10 overflow-hidden "
+        <div className="p-10 w-full overflow-hidden "
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -147,7 +147,7 @@ const Carousel = () => {
                 </motion.button>
             </div>
 
-            <div className="relative min-w-fit flex justify-center items-center">
+            <div className="relative w-full  flex justify-center items-center">
                 <div className="flex space-x-4 overflow-hidden">
                     <AnimatePresence initial={false} custom={direction} mode="popLayout">
                         {getVisibleCards().map((card, idx) => (
