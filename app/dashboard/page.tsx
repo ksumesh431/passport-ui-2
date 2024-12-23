@@ -6,9 +6,9 @@ const Dashboard = () => {
   return (
     <>
       <CarouselComponent />
-      <div className="relative w-full max-w-screen-lg mx-auto">
+      {/* <div className="relative w-full max-w-screen-lg mx-auto"> */}
         <SkillStoneFeatures />
-      </div>
+      {/* </div> */}
       <ContactForm />
       <BlogPosts />
     </>

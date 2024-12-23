@@ -123,7 +123,7 @@ const Carousel = () => {
     // for auto slide
 
     return (
-        <div className="p-10 w-full overflow-hidden "
+        <div className="p-10 w-full overflow-hidden"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
