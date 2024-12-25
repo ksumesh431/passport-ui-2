@@ -13,8 +13,8 @@ interface FormData {
 
 interface ServicesData {
     [key: string]: {
-        [key: string]: null;
-    } | {};
+        [key: string]: null | Record<string, never>;
+    } | Record<string, never>;
 }
 
 interface CountryCode {
