@@ -64,7 +64,7 @@ const Carousel = () => {
 
     const getVisibleCards = () => {
         const visibleCards = [];
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 4; i++) {
             const index = (currentIndex + i) % cards.length;
             visibleCards.push({ ...cards[index], index });
         }

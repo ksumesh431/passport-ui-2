@@ -51,7 +51,7 @@ function CustomNav() {
 
     return (
         <nav className="bg-indigo-900 text-white sticky top-0 z-30 shadow-md">
-            <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div className="container mx-auto px-4 py-2 flex justify-center md:justify-between lg:justify-between items-center">
                 {/* Icon/logo div */}
                 
                 <div className="flex items-center">

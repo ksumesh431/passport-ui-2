@@ -1,6 +1,7 @@
 'use client'
 import { ArrowPathIcon } from "@heroicons/react/24/solid"
 import { useState } from "react"
+import { ContactForm } from "@/components/contactForm"
 
 const Contacts = () => {
     const [formData, setFormData] = useState({
@@ -28,7 +29,8 @@ const Contacts = () => {
         }
 
         try {
-            const response = await fetch("https://nowk6gpjo9.execute-api.ca-central-1.amazonaws.com/prod/queries", {
+            // const response = await fetch("https://nowk6gpjo9.execute-api.ca-central-1.amazonaws.com/prod/queries", {
+            const response = await fetch("https://testing nowk6gpjo9.execute-api.ca-central-1.amazonaws.com/prod/queries", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -77,71 +79,8 @@ const Contacts = () => {
                 </div>
             </div>
 
-            {/* Contact Form Section */}
-            <div className="max-w-3xl mx-auto">
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
-                        <h2 className="text-2xl font-bold">Raise a Query</h2>
-                    </div>
-                    <form onSubmit={handleSubmit} className="p-8">
-                        <div className="mb-6">
-                            <label htmlFor="name" className="block text-lg font-medium text-gray-700">Your Name</label>
-                            <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="mt-2 w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                required
-                                disabled={isSubmitting}
-                            />
-                        </div>
-                        <div className="mb-6">
-                            <label htmlFor="email" className="block text-lg font-medium text-gray-700">Your Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="mt-2 w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                required
-                                disabled={isSubmitting}
-                            />
-                        </div>
-                        <div className="mb-6">
-                            <label htmlFor="message" className="block text-lg font-medium text-gray-700">Your Query</label>
-                            <textarea
-                                name="message"
-                                id="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                className="mt-2 w-full border rounded-lg p-3 min-h-[150px] focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                required
-                                disabled={isSubmitting}
-                            />
-                        </div>
-                        {error && (
-                            <p className="text-red-500 mb-4">{error}</p>
-                        )}
-                        <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                        >
-                            {isSubmitting ? (
-                                <>
-                                    <ArrowPathIcon className="h-5 w-5 mr-2 animate-spin" />
-                                    Submitting...
-                                </>
-                            ) : (
-                                'Submit Query'
-                            )}
-                        </button>
-                    </form>
-                </div>
-            </div>
+            {/* Contact Form */}
+            <ContactForm/>
         </div>
     )
 }
