@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback} from "react";
 import { FaUsers, FaShieldAlt, FaHandshake, FaTasks, FaGlobe, FaStar, FaLock, FaRocket } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -49,11 +49,12 @@ const Carousel = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
 
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         setDirection(1);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    };
+    }, [cards.length]);
 
     const handlePrev = () => {
         setDirection(-1);
@@ -108,17 +109,17 @@ const Carousel = () => {
     };
 
 
-    const [isHovered, setIsHovered] = useState(false);
+    
 
     useEffect(() => {
-        if (isHovered) return; // Don't auto-slide while hovering
+        if (isHovered) return; 
 
         const autoSlideTimer = setInterval(() => {
             handleNext();
         }, 5000);
 
         return () => clearInterval(autoSlideTimer);
-    }, [isHovered]);
+    }, [isHovered, handleNext]);
 
     // for auto slide
 
