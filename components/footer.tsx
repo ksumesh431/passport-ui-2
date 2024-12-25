@@ -18,7 +18,7 @@ function CustomFooter() {
             </p>
           </div>
           <div className="border-t border-gray-700/50 mt-6 pt-6">
-            <p className="text-sm text-gray-400">Copyright ©2024 DocoAid. All rights reserved.</p>
+            <p className="text-sm text-gray-400">Copyright © 2024 DocoAid. All rights reserved.</p>
           </div>
         </div>
       </div>
