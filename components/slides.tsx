@@ -163,7 +163,7 @@ const MultiSlideCarousel = () => {
                         >
                             <div
                                 ref={el => { slideRefs.current[index] = el }}
-                                className="mb-[10px] rounded-lg bg-white shadow-lg flex flex-col items-center justify-start p-6 md:p-8 text-center"
+                                className="mb-[10px] rounded-lg bg-white shadow-lg flex flex-col items-center justify-start p-6 md:p-8 text-center select-none" // Add select-none here
                                 style={{ minHeight: maxHeight > 0 ? maxHeight : 'auto' }}
                             >
                                 <div className="mb-6">

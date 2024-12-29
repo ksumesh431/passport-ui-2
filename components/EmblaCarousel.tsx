@@ -69,7 +69,7 @@ const EmblaCarousel = () => {
                                     alt={slide.title}
                                     className="object-cover w-full h-full"
                                 />
-                                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-8">
+                                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-8 select-none"> {/* Add select-none here */}
                                     <h3 className="text-white text-3xl font-bold mb-2">{slide.title}</h3>
                                     <p className="text-gray-200">{slide.description}</p>
                                 </div>
