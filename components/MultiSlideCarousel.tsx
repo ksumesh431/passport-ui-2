@@ -56,7 +56,7 @@ const SLIDES: SlideType[] = [
 ];
 
 const MultiSlideCarousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
+    const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [Autoplay({ delay: 5000, stopOnInteraction: false })]);
     const [maxHeight, setMaxHeight] = useState<number>(0);
     const [slidesConfig, setSlidesConfig] = useState<{ widthClass: string, count: number }>({
         widthClass: 'flex-[0_0_100%]',

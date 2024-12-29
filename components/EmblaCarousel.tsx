@@ -37,7 +37,7 @@ const SLIDES: SlideType[] = [
 
 const EmblaCarousel = () => {
     // Configure Autoplay with a custom delay and disable stop on interaction
-    const autoplayOptions = { delay: 3000, stopOnInteraction: false };
+    const autoplayOptions = { delay: 4000, stopOnInteraction: false };
     const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [Autoplay(autoplayOptions)]);
 
     const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
