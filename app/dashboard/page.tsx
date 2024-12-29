@@ -1,5 +1,4 @@
-import { CarouselComponent } from '@/components/carasoul';
-import SkillStoneFeatures from '@/components/slider';
+
 import { ContactForm, ExpertServices } from '@/components/contactForm';
 import BlogPosts from '@/components/blogposts';
 import EmblaCarousel from '@/components/EmblaCarousel';
