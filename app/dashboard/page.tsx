@@ -2,7 +2,7 @@
 import { ContactForm, ExpertServices } from '@/components/contactForm';
 import BlogPosts from '@/components/blogposts';
 import EmblaCarousel from '@/components/EmblaCarousel';
-import MultiSlideCarousel from '@/components/MultiSlideCarousel';
+import MultiSlideCarousel from '@/components/slides';
 const Dashboard = () => {
   return (
     <>
