@@ -57,7 +57,7 @@ function CustomNav() {
                 <div className="flex items-center">
                     <Link href="/dashboard">
                         <img
-                            src={`${basePath}/logo.jpeg`}
+                            src={`${basePath}/logo.webp`}
                             className="h-10 w-auto drop-shadow-lg rounded-xl filter bg-white p-1"
                             alt="Docoaid Logo"
                         />

@@ -14,22 +14,22 @@ type SlideType = {
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES: SlideType[] = [
     {
-        image: `${basePath}/usa.jpg`,
+        image: `${basePath}/usa.webp`,
         title: 'United States of America',
         description: 'Experience the American Dream with our comprehensive visa services',
     },
     {
-        image: `${basePath}/uk.jpg`,
+        image: `${basePath}/uk.webp`,
         title: 'United Kingdom',
         description: 'Discover opportunities in the heart of Great Britain',
     },
     {
-        image: `${basePath}/canada.jpg`,
+        image: `${basePath}/canada.webp`,
         title: 'Canada',
         description: 'Your gateway to the Great White North\'s possibilities',
     },
     {
-        image: `${basePath}/aus.jpg`,
+        image: `${basePath}/aus.webp`,
         title: 'Australia',
         description: 'Begin your journey Down Under with expert guidance',
     },

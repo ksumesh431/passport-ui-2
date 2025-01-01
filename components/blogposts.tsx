@@ -5,37 +5,37 @@ const BlogPosts = () => {
     {
       title: "Essential Travel Tips for Beginners",
       description: "Planning your first trip can be overwhelming. Here are essential tips to help you travel smoothly.",
-      image: `${basePath}/b1.jpg`,
+      image: `${basePath}/b1.webp`,
       link: "/blogs/blog1"
     },
     {
       title: "How to Apply for a Visa: A Step-by-Step Guide",
       description: "The visa application process can seem confusing, but with this guide, it becomes easy to navigate.",
-      image: `${basePath}/b2.jpg`,
+      image: `${basePath}/b2.webp`,
       link: "/blogs/blog2"
     },
     {
       title: "Top Travel Destinations for 2024",
       description: "Looking for your next adventure? Discover the best places to travel in 2024 that you won’t want to miss.",
-      image: `${basePath}/b3.jpg`,
+      image: `${basePath}/b3.webp`,
       link: "/blogs/blog4"
     },
     {
       title: "How to Renew Your Passport: Everything You Need to Know",
       description: "Don’t let an expired passport ruin your travel plans. Here’s how to renew it hassle-free.",
-      image: `${basePath}/b4.jpg`,
+      image: `${basePath}/b4.webp`,
       link: "/blogs/blog3"
     },
     {
       title: "Why You Need Travel Insurance",
       description: "Travel insurance is a must when traveling abroad. Here’s why it’s essential for your peace of mind.",
-      image: `${basePath}/b5.jpg`,
+      image: `${basePath}/b5.webp`,
       link: "/blogs/blog5"
     },
     {
       title: "Cultural Etiquette When Traveling Abroad",
       description: "Respecting local customs is key to a positive travel experience. Learn important cultural tips for your travels.",
-      image: `${basePath}/b6.jpg`,
+      image: `${basePath}/b6.webp`,
       link: "/blogs/blog6"
     }
   ];
