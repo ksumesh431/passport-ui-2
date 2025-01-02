@@ -13,7 +13,7 @@ const Rbutton = () => {
             <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
                 <DropdownMenu.Trigger>
                     <Text weight="bold" size="4" className="center-items space-x-2 cursor-pointer select-none ">
-                        <span className="transition-transform duration-300 hover:scale-105 inline-block">Services</span><DropdownMenu.TriggerIcon />
+                        <span className="transition-transform duration-300 hover:scale-105 inline-block">Services</span><DropdownMenu.TriggerIcon/>
                     </Text>
                 </DropdownMenu.Trigger>
 

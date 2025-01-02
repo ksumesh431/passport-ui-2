@@ -58,7 +58,7 @@ function CustomNav() {
                     <Link href="/dashboard" className="flex items-center">
                         <img
                             src={`${basePath}/logo.webp`}
-                            className="h-14 w-auto drop-shadow-md rounded-xl transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
+                            className="h-14 w-auto rounded-xl transition-transform duration-300 hover:scale-105 "
                             alt="DocoAid Logo"
                         />
                     </Link>

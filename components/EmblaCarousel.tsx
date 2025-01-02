@@ -3,6 +3,7 @@ import React, { useCallback, useState, useEffect } from 'react';
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image'; // Import the Image component
 import { basePath } from '@/utils/config'; // Ensure basePath is defined
 
 type SlideType = {
@@ -64,12 +65,14 @@ const EmblaCarousel = () => {
                     {SLIDES.map((slide, index) => (
                         <div className="flex-[0_0_100%] min-w-0 pl-4" key={index}>
                             <div className="relative w-full h-96 sm:h-[400px] lg:h-[500px] xl:h-[600px] rounded-lg overflow-hidden">
-                                <img
+                                <Image
                                     src={slide.image}
                                     alt={slide.title}
-                                    className="object-cover w-full h-full"
+                                    fill // This makes the image fill the container
+                                    className="object-cover" // Ensures the image covers the area
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Responsive sizes
                                 />
-                                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-8 select-none"> {/* Add select-none here */}
+                                <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-8 select-none">
                                     <h3 className="text-white text-3xl font-bold mb-2">{slide.title}</h3>
                                     <p className="text-gray-200">{slide.description}</p>
                                 </div>
