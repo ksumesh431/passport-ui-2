@@ -67,24 +67,32 @@ function CustomNav() {
                 {/* Desktop menu */}
                 <div className="hidden md:flex items-center space-x-9">
                     <Text {...menuTextProps}>
-                        <Link href="/dashboard">
-                            <span className="transition-transform duration-300 hover:scale-105 inline-block">Home</span>
+                        <Link href="/dashboard" className="group">
+                            <span className="transition-transform duration-300 hover:scale-105 inline-block relative">
+                                Home
+                                <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-current transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                            </span>
                         </Link>
                     </Text>
                     <Text {...menuTextProps}>
-                        <Link href="/about">
-                            <span className="transition-transform duration-300 hover:scale-105 inline-block">About Us</span>
+                        <Link href="/about" className="group">
+                            <span className="transition-transform duration-300 hover:scale-105 inline-block relative">
+                                About Us
+                                <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-current transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                            </span>
                         </Link>
                     </Text>
                     {/* Services */}
                     <Rbutton />
                     <Text {...menuTextProps}>
-                        <Link href="/contactus">
-                            <span className="transition-transform duration-300 hover:scale-105 inline-block">Contact Us</span>
+                        <Link href="/contactus" className="group">
+                            <span className="transition-transform duration-300 hover:scale-105 inline-block relative">
+                                Contact Us
+                                <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-current transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                            </span>
                         </Link>
                     </Text>
                 </div>
-
 
                 {/* Hamburger button */}
                 <button

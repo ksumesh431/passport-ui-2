@@ -12,8 +12,12 @@ const Rbutton = () => {
         <>
             <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
                 <DropdownMenu.Trigger>
-                    <Text weight="bold" size="4" className="center-items space-x-2 cursor-pointer select-none ">
-                        <span className="transition-transform duration-300 hover:scale-105 inline-block">Services</span><DropdownMenu.TriggerIcon/>
+                    <Text weight="bold" size="4" className="center-items space-x-2 cursor-pointer select-none group">
+                        <span className="transition-transform duration-300 hover:scale-105 inline-block relative">
+                            Services
+                            <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-current transform -translate-x-1/2 transition-all duration-300 group-hover:w-full"></span>
+                        </span>
+                        <DropdownMenu.TriggerIcon />
                     </Text>
                 </DropdownMenu.Trigger>
 
