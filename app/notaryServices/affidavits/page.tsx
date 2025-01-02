@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import ContactUsButton from '@/components/contact-us-button-component';
 
 const AffidavitsPage = () => {

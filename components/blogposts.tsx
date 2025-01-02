@@ -60,12 +60,14 @@ const BlogPosts = () => {
               <p className="text-gray-600 text-sm mb-2 line-clamp-2">
                 {post.description}
               </p>
-              
+
               <a
                 href={post.link}
                 className="text-blue-500 hover:text-blue-700 text-sm font-medium"
+                aria-label={`Read more about ${post.title}`}
+                title={`Read more about ${post.title}`}
               >
-                Read More
+                Read more
               </a>
             </div>
           </div>
