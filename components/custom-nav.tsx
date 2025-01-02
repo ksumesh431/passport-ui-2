@@ -50,16 +50,16 @@ function CustomNav() {
 
 
     return (
-        <nav className="bg-indigo-900 text-white sticky top-0 z-30 shadow-md">
+        <nav className="bg-primary text-white sticky top-0 z-30 shadow-md">
             <div className="container mx-auto px-4 py-2 flex justify-center md:justify-between lg:justify-between items-center">
                 {/* Icon/logo div */}
-                
-                <div className="flex items-center">
-                    <Link href="/dashboard">
+
+                <div className="flex items-center bg-primary px-4 py-2">
+                    <Link href="/dashboard" className="flex items-center">
                         <img
                             src={`${basePath}/logo.webp`}
-                            className="h-10 w-auto drop-shadow-lg rounded-xl filter bg-white p-1"
-                            alt="Docoaid Logo"
+                            className="h-14 w-auto drop-shadow-md rounded-xl transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
+                            alt="DocoAid Logo"
                         />
                     </Link>
                 </div>
@@ -67,17 +67,21 @@ function CustomNav() {
                 {/* Desktop menu */}
                 <div className="hidden md:flex items-center space-x-9">
                     <Text {...menuTextProps}>
-                        <Link href="/dashboard"><span>Home</span></Link>
+                        <Link href="/dashboard">
+                            <span className="transition-transform duration-300 hover:scale-105 inline-block">Home</span>
+                        </Link>
                     </Text>
                     <Text {...menuTextProps}>
-                        <Link href="/about"><span>About Us</span></Link>
+                        <Link href="/about">
+                            <span className="transition-transform duration-300 hover:scale-105 inline-block">About Us</span>
+                        </Link>
                     </Text>
-
                     {/* Services */}
                     <Rbutton />
-
                     <Text {...menuTextProps}>
-                        <Link href="/contactus"><span>Contact Us</span></Link>
+                        <Link href="/contactus">
+                            <span className="transition-transform duration-300 hover:scale-105 inline-block">Contact Us</span>
+                        </Link>
                     </Text>
                 </div>
 

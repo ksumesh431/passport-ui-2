@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import ContactUsButton from '@/components/contact-us-button-component';
 
 const IELTSCoachingPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
       {/* Hero Section */}
       <div className="relative mb-16">
-        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+        <div className="bg-primary text-white py-12 px-6 rounded-3xl">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-3">IELTS Coaching</h1>
             <p className="text-xl opacity-90">
@@ -14,7 +15,7 @@ const IELTSCoachingPage = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="bg-white rounded-2xl shadow-lg p-8 mx-4 md:mx-auto max-w-3xl -mt-8 relative z-10">
           <p className="text-lg text-gray-700">
             Whether you're applying for higher education, immigration, or employment in English-speaking countries, excelling in the IELTS exam is a key step towards achieving your goals.
@@ -25,7 +26,7 @@ const IELTSCoachingPage = () => {
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Types of IELTS Exam */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Types of IELTS Exam</h2>
           </div>
           <div className="p-8">
@@ -42,7 +43,7 @@ const IELTSCoachingPage = () => {
 
         {/* Why Choose Us */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Why Choose DocoAid for Your IELTS Preparation?</h2>
           </div>
           <div className="p-8 space-y-6">
@@ -73,7 +74,7 @@ const IELTSCoachingPage = () => {
               }
             ].map((feature, index) => (
               <div key={index} className="p-6 border border-gray-200 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-indigo-800">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-primary">{feature.title}</h3>
                 <p className="text-gray-700">{feature.content}</p>
               </div>
             ))}
@@ -82,7 +83,7 @@ const IELTSCoachingPage = () => {
 
         {/* IELTS Exam Structure */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">IELTS Exam Structure</h2>
           </div>
           <div className="p-8 space-y-6">
@@ -105,7 +106,7 @@ const IELTSCoachingPage = () => {
               }
             ].map((section, index) => (
               <div key={index} className="p-6 border border-gray-200 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3 text-indigo-800">{section.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-primary">{section.title}</h3>
                 <p className="text-gray-700">{section.content}</p>
               </div>
             ))}
@@ -114,7 +115,7 @@ const IELTSCoachingPage = () => {
 
         {/* Our Services */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Our Services Include</h2>
           </div>
           <div className="p-8 space-y-4">
@@ -127,7 +128,7 @@ const IELTSCoachingPage = () => {
                 "Listening & Reading Practice: Sharpen your listening and reading skills with practice exercises and strategies to improve speed and accuracy."
               ].map((service, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-indigo-600 mr-2">•</span>
+                  <span className="text-primary mr-2">•</span>
                   <span className="text-gray-700">{service}</span>
                 </li>
               ))}
@@ -137,7 +138,7 @@ const IELTSCoachingPage = () => {
 
         {/* CTA Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Get Started Today</h2>
           </div>
           <div className="p-8 text-center space-y-6">
@@ -149,14 +150,11 @@ const IELTSCoachingPage = () => {
                 Ready to take the first step? Contact us today to schedule a free consultation, or sign up for our IELTS preparation course. Let's unlock your future together!
               </p>
             </div>
-            <Link
-              href="/contactus"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg 
-                hover:bg-indigo-700 shadow-md hover:shadow-lg 
-                transition duration-200 ease-in-out cursor-pointer text-center"
-            >
-              Contact Us Today
-            </Link>
+
+
+
+            <ContactUsButton />
+
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const TravelTips = () => {
   return (
-    <section className="bg-indigo-900 text-white p-6 md:p-10">
+    <section className="bg-primary text-white p-6 md:p-10">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4">Essential Travel Tips for Beginners</h2>
         <p className="text-lg mb-4">

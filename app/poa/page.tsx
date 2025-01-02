@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import ContactUsButton from '@/components/contact-us-button-component';
 const PowerOfAttorneyPage = () => {
     return (
         <div className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
             {/* Hero Section */}
             <div className="relative mb-16">
-                <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+                <div className="bg-primary text-white py-12 px-6 rounded-3xl">
                     <div className="max-w-3xl mx-auto text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-3">Power of Attorney Drafting</h1>
                         <p className="text-xl opacity-90">
@@ -28,7 +29,7 @@ const PowerOfAttorneyPage = () => {
             {/* Why Essential Section */}
             <div className="max-w-5xl mx-auto space-y-8">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
+                    <div className="bg-primary text-white py-4 px-8">
                         <h2 className="text-2xl font-bold">Why a Properly Drafted Power of Attorney is Essential</h2>
                     </div>
                     <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -51,7 +52,7 @@ const PowerOfAttorneyPage = () => {
                             }
                         ].map((item, index) => (
                             <div key={index} className="p-6 border border-gray-200 rounded-lg">
-                                <h3 className="text-xl font-semibold mb-3 text-indigo-800">{item.title}</h3>
+                                <h3 className="text-xl font-semibold mb-3 text-primary">{item.title}</h3>
                                 <p className="text-gray-700">{item.content}</p>
                             </div>
                         ))}
@@ -60,7 +61,7 @@ const PowerOfAttorneyPage = () => {
 
                 {/* Why Choose Us */}
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
+                    <div className="bg-primary text-white py-4 px-8">
                         <h2 className="text-2xl font-bold">Why Choose DocoAid for Your POA Drafting?</h2>
                     </div>
                     <div className="p-8">
@@ -84,15 +85,7 @@ const PowerOfAttorneyPage = () => {
                     <p className="text-xl text-gray-800 mb-4">
                         Secure your interests and simplify the management of your affairs with a professionally drafted Power of Attorney.
                     </p>
-                    <Link
-                        href="/contactus"
-                        className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg 
-    hover:bg-indigo-700 hover:shadow-lg transform hover:-translate-y-0.5
-    transition-all duration-300 ease-in-out cursor-pointer text-center
-    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
-                        Contact Us Today
-                    </Link>
+                    <ContactUsButton />
                 </div>
             </div>
         </div>

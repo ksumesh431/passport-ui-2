@@ -3,7 +3,7 @@ const ApplicationsPage = () => {
       <div className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
         {/* Hero Section with Overlap */}
         <div className="relative mb-16">
-          <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+          <div className="bg-primary text-white py-12 px-6 rounded-3xl">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-3">New Applications</h1>
               <p className="text-xl opacity-90">
@@ -25,7 +25,7 @@ const ApplicationsPage = () => {
         <div className="max-w-5xl mx-auto space-y-8">
           {/* Services Overview */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="bg-indigo-800 text-white py-4 px-8">
+            <div className="bg-primary text-white py-4 px-8">
               <h2 className="text-2xl font-bold">Our Application Services</h2>
             </div>
             <div className="p-8">
@@ -40,7 +40,7 @@ const ApplicationsPage = () => {
   
           {/* Why Choose Us */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="bg-indigo-800 text-white py-4 px-8">
+            <div className="bg-primary text-white py-4 px-8">
               <h2 className="text-2xl font-bold">Why Choose DocoAid</h2>
             </div>
             <div className="p-8">

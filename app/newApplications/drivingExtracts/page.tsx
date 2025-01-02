@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import ContactUsButton from '@/components/contact-us-button-component';
 export default function DrivingExtractsPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
       {/* Hero Section with Overlap */}
       <div className="relative mb-16">
-        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+        <div className="bg-primary text-white py-12 px-6 rounded-3xl">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-3">Driving Extract Application Services</h1>
             <p className="text-xl opacity-90">
@@ -25,7 +26,7 @@ export default function DrivingExtractsPage() {
       <div className="max-w-5xl mx-auto space-y-8 mt-8 px-4">
         {/* Services Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Our Driving Extract Services</h2>
           </div>
           <div className="p-8">
@@ -46,7 +47,7 @@ export default function DrivingExtractsPage() {
 
         {/* Benefits Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Why Choose DocoAid?</h2>
           </div>
           <div className="p-8">
@@ -64,25 +65,17 @@ export default function DrivingExtractsPage() {
         {/* Get Started Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-indigo-800 mb-4">Get Your Driving Extract Today!</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">Get Your Driving Extract Today!</h2>
             <p className="text-lg text-gray-700 mb-8">
               Obtaining a driving extract can be a stressful and confusing task, particularly if there are language barriers or bureaucratic hurdles. DocoAid takes care of all the details, helping you avoid confusion and frustration.
             </p>
 
             {/* Final CTA */}
             <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100">
-              <h3 className="text-xl font-bold text-indigo-800 mb-4">Contact Us Today!</h3>
-              <p className="text-lg font-medium text-indigo-900 mb-6">
+              <p className="text-lg font-medium text-primary mb-6">
                 Ready to get your driving extract? Contact DocoAid for professional assistance and get your quote today!
               </p>
-              <Link
-                href="/contactus"
-                className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg 
-                  hover:bg-indigo-700 shadow-md hover:shadow-lg 
-                  transition duration-200 ease-in-out cursor-pointer text-center"
-              >
-                Get Your Quote
-              </Link>
+              <ContactUsButton/>
             </div>
           </div>
         </div>

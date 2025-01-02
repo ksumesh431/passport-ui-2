@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-
+import ContactUsButton from '@/components/contact-us-button-component';
 const SpecificPOAPage = () => {
     return (
         <div className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
             {/* Hero Section */}
             <div className="relative mb-16">
-                <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+                <div className="bg-primary text-white py-12 px-6 rounded-3xl">
                     <div className="max-w-3xl mx-auto text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-3">Specific Power of Attorney</h1>
                     </div>
@@ -25,7 +25,7 @@ const SpecificPOAPage = () => {
             <div className="max-w-5xl mx-auto space-y-8">
                 {/* Key Features */}
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
+                    <div className="bg-primary text-white py-4 px-8">
                         <h2 className="text-2xl font-bold">Key Features</h2>
                     </div>
                     <div className="p-8">
@@ -49,7 +49,7 @@ const SpecificPOAPage = () => {
                                 }
                             ].map((feature, index) => (
                                 <div key={index} className="p-6 border border-gray-200 rounded-lg">
-                                    <h3 className="text-xl font-semibold mb-3 text-indigo-800">{feature.title}</h3>
+                                    <h3 className="text-xl font-semibold mb-3 text-primary">{feature.title}</h3>
                                     <p className="text-gray-700">{feature.content}</p>
                                 </div>
                             ))}
@@ -58,7 +58,7 @@ const SpecificPOAPage = () => {
                 </div>
                 {/* Uses Section */}
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
+                    <div className="bg-primary text-white py-4 px-8">
                         <h2 className="text-2xl font-bold">Common Uses</h2>
                     </div>
                     <div className="p-8">
@@ -79,7 +79,7 @@ const SpecificPOAPage = () => {
                 </div>
                 {/* Examples Section */}
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
+                    <div className="bg-primary text-white py-4 px-8">
                         <h2 className="text-2xl font-bold">Examples of Specific POA</h2>
                     </div>
                     <div className="p-8">
@@ -95,7 +95,7 @@ const SpecificPOAPage = () => {
                                 }
                             ].map((example, index) => (
                                 <div key={index} className="p-6 border border-gray-200 rounded-lg">
-                                    <h3 className="text-xl font-semibold mb-3 text-indigo-800">{example.title}</h3>
+                                    <h3 className="text-xl font-semibold mb-3 text-primary">{example.title}</h3>
                                     <p className="text-gray-700">{example.content}</p>
                                 </div>
                             ))}
@@ -105,7 +105,7 @@ const SpecificPOAPage = () => {
 
                 {/* Important Note */}
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div className="bg-indigo-800 text-white py-4 px-8">
+                    <div className="bg-primary text-white py-4 px-8">
                         <h2 className="text-2xl font-bold">Important Note</h2>
                     </div>
                     <div className="p-8">
@@ -122,14 +122,7 @@ const SpecificPOAPage = () => {
                         Need assistance in creating a Specific Power of Attorney? Let our experts help you draft
                         a precise and legally sound document that meets your exact requirements.
                     </p>
-                    <Link
-                        href="/contactus"
-                        className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg 
-              hover:bg-indigo-700 shadow-md hover:shadow-lg 
-              transition duration-200 ease-in-out cursor-pointer text-center"
-                    >
-                        Contact Us Today
-                    </Link>
+                    <ContactUsButton />
                 </div>
             </div>
         </div>

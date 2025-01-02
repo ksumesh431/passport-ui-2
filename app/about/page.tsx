@@ -3,7 +3,7 @@ const AboutPage = () => {
     <div className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
       {/* Hero Section with Overlap */}
       <div className="relative mb-16">
-        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+        <div className="bg-primary text-white py-12 px-6 rounded-3xl">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-3">About Us</h1>
             <p className="text-xl opacity-90">
@@ -27,7 +27,7 @@ const AboutPage = () => {
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Services Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Our Services</h2>
           </div>
           <div className="p-8">
@@ -45,7 +45,7 @@ const AboutPage = () => {
 
         {/* Documentation Matters Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Why Proper Documentation Matters</h2>
           </div>
           <div className="p-8">
@@ -72,7 +72,7 @@ const AboutPage = () => {
 
             {/* Final CTA */}
             <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100">
-              <p className="text-lg font-medium text-indigo-900">
+              <p className="text-lg font-medium text-primary">
                 With DocoAid, you can have peace of mind knowing that your documentation is in expert hands. 
                 Let us help you navigate the complexities of documentation with confidence and ease.
               </p>

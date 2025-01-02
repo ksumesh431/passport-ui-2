@@ -58,7 +58,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                 }}
                             >
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/">New Passport (India/Canada)</Link>
+                                    <Link href="/contactus">New Passport (India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
@@ -78,12 +78,12 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/">Surrender Certificate</Link>
+                                    <Link href="/contactus">Surrender Certificate</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/">PR Card Renewal</Link>
+                                    <Link href="/contactus">PR Card Renewal</Link>
                                 </DropdownMenu.Item>
 
 
@@ -164,7 +164,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/">Middle-east</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/contactus">Middle-east</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
                     </DropdownMenu.Content>

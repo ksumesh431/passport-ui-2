@@ -13,7 +13,7 @@ const Rbutton = () => {
             <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
                 <DropdownMenu.Trigger>
                     <Text weight="bold" size="4" className="center-items space-x-2 cursor-pointer select-none ">
-                        <span>Services</span><DropdownMenu.TriggerIcon />
+                        <span className="transition-transform duration-300 hover:scale-105 inline-block">Services</span><DropdownMenu.TriggerIcon />
                     </Text>
                 </DropdownMenu.Trigger>
 
@@ -28,7 +28,7 @@ const Rbutton = () => {
                         <DropdownMenu.SubTrigger><Link href="/newApplications">New Applications</Link></DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/">New Passport (India/Canada)</Link>
+                                <Link href="/contactus">New Passport (India/Canada)</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
                                 <Link href="/newApplications/passportRenewals">Passport Renewal (India/Canada)</Link>
@@ -40,10 +40,10 @@ const Rbutton = () => {
                                 <Link href="/newApplications/OCIApplications">OCI Applications</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/">Surrender Certificate</Link>
+                                <Link href="/contactus">Surrender Certificate</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/">PR Card Renewal</Link>
+                                <Link href="/contactus">PR Card Renewal</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
                                 <Link href="/newApplications/visaApplications">Visitor Visa Applications</Link>
@@ -84,7 +84,7 @@ const Rbutton = () => {
                     <DropdownMenu.Sub>
                         <DropdownMenu.SubTrigger>Run Away Marriages</DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/">Middle-east</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/contactus">Middle-east</Link></DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
                 </DropdownMenu.Content>

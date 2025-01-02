@@ -1,11 +1,11 @@
 import Link from 'next/link';
-
+import ContactUsButton from '@/components/contact-us-button-component';
 export default function OCIPage() {
   return (
     <main className="max-w-6xl mx-auto px-4 py-8 bg-gray-50">
       {/* Hero Section with Overlap */}
       <div className="relative mb-16">
-        <div className="bg-indigo-900 text-white py-12 px-6 rounded-3xl">
+        <div className="bg-primary text-white py-12 px-6 rounded-3xl">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-3">OCI Application Assistance by DocoAid</h1>
             <p className="text-xl opacity-90">
@@ -29,7 +29,7 @@ export default function OCIPage() {
       <div className="max-w-5xl mx-auto space-y-8 mt-8 px-4">
         {/* How DocoAid Helps Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">How DocoAid Helps with OCI Applications</h2>
           </div>
           <div className="p-8">
@@ -47,13 +47,13 @@ export default function OCIPage() {
 
         {/* Our OCI Application Services */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Our OCI Application Services</h2>
           </div>
           <div className="p-8">
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-indigo-800 mb-3">1. New OCI Applications</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">1. New OCI Applications</h3>
                 <p className="text-gray-700 mb-3">If you or your family members are applying for the OCI card for the first time, we will guide you through the entire process:</p>
                 <ul className="list-disc list-inside text-gray-700 ml-4">
                   <li>Verify eligibility based on Indian origin</li>
@@ -64,17 +64,17 @@ export default function OCIPage() {
               </div>
               
               <div>
-                <h3 className="text-xl font-bold text-indigo-800 mb-3">2. OCI Renewals</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">2. OCI Renewals</h3>
                 <p className="text-gray-700">OCI cards are valid for a lifetime, but they may need to be renewed if certain information changes (such as your passport details). DocoAid helps with OCI renewals, ensuring that your documents are up-to-date and your application is submitted smoothly.</p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-indigo-800 mb-3">3. OCI for Minor Children</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">3. OCI for Minor Children</h3>
                 <p className="text-gray-700">For minor children of Indian origin, the OCI application process may include additional documentation, such as proof of the parent's Indian origin and the child's birth certificate. DocoAid ensures that your child's application is completed correctly and without hassle.</p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-indigo-800 mb-3">4. Miscellaneous OCI Services</h3>
+                <h3 className="text-xl font-bold text-primary mb-3">4. Miscellaneous OCI Services</h3>
                 <p className="text-gray-700">We also offer assistance with other OCI-related services, including:</p>
                 <ul className="list-disc list-inside text-gray-700 ml-4">
                   <li>Changing details (passport, address, name, etc.)</li>
@@ -88,7 +88,7 @@ export default function OCIPage() {
 
         {/* Why Is the OCI Card Important? */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="bg-indigo-800 text-white py-4 px-8">
+          <div className="bg-primary text-white py-4 px-8">
             <h2 className="text-2xl font-bold">Why Is the OCI Card Important?</h2>
           </div>
           <div className="p-8">
@@ -107,25 +107,17 @@ export default function OCIPage() {
         {/* Get Started Section */}
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-indigo-800 mb-4">Get Started with DocoAid Today!</h2>
+            <h2 className="text-2xl font-bold text-primary mb-4">Get Started with DocoAid Today!</h2>
             <p className="text-lg text-gray-700 mb-8">
               Navigating the OCI application process can be complex, but with DocoAid by your side, you'll have expert support to ensure everything goes smoothly. We provide fast, efficient, and reliable assistance with both new and renewal OCI applications.
             </p>
 
             {/* Final CTA */}
             <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-indigo-100">
-              <h3 className="text-xl font-bold text-indigo-800 mb-4">Contact Us Today!</h3>
-              <p className="text-lg font-medium text-indigo-900 mb-6">
+              <p className="text-lg font-medium text-primary mb-6">
                 Ready to apply for your Overseas Citizenship of India (OCI) card? Reach out to DocoAid for expert help, and let us guide you through the application process seamlessly.
               </p>
-              <Link
-                href="/contactus"
-                className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg 
-                  hover:bg-indigo-700 shadow-md hover:shadow-lg 
-                  transition duration-200 ease-in-out cursor-pointer text-center"
-              >
-                Contact Us Today
-              </Link>
+              <ContactUsButton/>
             </div>
           </div>
         </div>
