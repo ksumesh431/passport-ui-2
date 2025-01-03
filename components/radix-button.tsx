@@ -7,6 +7,7 @@ const Rbutton = () => {
     const [isOpen, setIsOpen] = useState(false);
     const closeDropdown = () => setIsOpen(false);
     const dropdownItemStyles = "cursor-pointer hover:cursor-pointer";
+    const dropdownItemLinkStyles = "w-full h-full flex items-center";
 
     return (
         <>
@@ -29,34 +30,34 @@ const Rbutton = () => {
                     </DropdownMenu.Item>
 
                     <DropdownMenu.Sub>
-                        <DropdownMenu.SubTrigger><Link href="/newApplications">New Applications</Link></DropdownMenu.SubTrigger>
+                        <DropdownMenu.SubTrigger><Link href="/newApplications"  className={dropdownItemLinkStyles}>New Applications</Link></DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/contactus">New Passport (India/Canada)</Link>
+                                <Link href="/contactus"  className={dropdownItemLinkStyles}>New Passport (India/Canada)</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/newApplications/passportRenewals">Passport Renewal (India/Canada)</Link>
+                                <Link href="/newApplications/passportRenewals"  className={dropdownItemLinkStyles}>Passport Renewal (India/Canada)</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/newApplications/PCC">PCC (Middle-east/India/Canada)</Link>
+                                <Link href="/newApplications/PCC"  className={dropdownItemLinkStyles}>PCC (Middle-east/India/Canada)</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/newApplications/OCIApplications">OCI Applications</Link>
+                                <Link href="/newApplications/OCIApplications"  className={dropdownItemLinkStyles}>OCI Applications</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/contactus">Surrender Certificate</Link>
+                                <Link href="/contactus"  className={dropdownItemLinkStyles}>Surrender Certificate</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/contactus">PR Card Renewal</Link>
+                                <Link href="/contactus"  className={dropdownItemLinkStyles}>PR Card Renewal</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/newApplications/visaApplications">Visitor Visa Applications</Link>
+                                <Link href="/newApplications/visaApplications"  className={dropdownItemLinkStyles}>Visitor Visa Applications</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/newApplications/drivingExtracts">Driving Extract</Link>
+                                <Link href="/newApplications/drivingExtracts"  className={dropdownItemLinkStyles}>Driving Extract</Link>
                             </DropdownMenu.Item>
                             <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}>
-                                <Link href="/newApplications/consentLetter">Child Travel Consent</Link>
+                                <Link href="/newApplications/consentLetter"  className={dropdownItemLinkStyles}>Child Travel Consent</Link>
                             </DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
@@ -64,31 +65,31 @@ const Rbutton = () => {
                     <DropdownMenu.Sub>
                         <DropdownMenu.SubTrigger>Translation Services</DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/documents">Documents</Link></DropdownMenu.Item>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat">Whatsapp Chat</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/documents"  className={dropdownItemLinkStyles}>Documents</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat"  className={dropdownItemLinkStyles}>Whatsapp Chat</Link></DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
 
                     <DropdownMenu.Sub>
                         <DropdownMenu.SubTrigger>Notary Services</DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/affidavits">Affidavits</Link> </DropdownMenu.Item>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization">Document Notarization</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/affidavits" className={dropdownItemLinkStyles}>Affidavits</Link> </DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization"  className={dropdownItemLinkStyles}>Document Notarization</Link></DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
 
                     <DropdownMenu.Sub>
-                        <DropdownMenu.SubTrigger><Link href="/poa">Power of Attorney (POA)</Link></DropdownMenu.SubTrigger>
+                        <DropdownMenu.SubTrigger><Link href="/poa"  className={dropdownItemLinkStyles}>Power of Attorney (POA)</Link></DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/generalPOA">General POA</Link></DropdownMenu.Item>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/specificPOA">Specific POA</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/generalPOA"  className={dropdownItemLinkStyles}>General POA</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/poa/specificPOA"  className={dropdownItemLinkStyles}>Specific POA</Link></DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
 
                     <DropdownMenu.Sub>
                         <DropdownMenu.SubTrigger>Run Away Marriages</DropdownMenu.SubTrigger>
                         <DropdownMenu.SubContent className='z-40'>
-                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/contactus">Middle-east</Link></DropdownMenu.Item>
+                            <DropdownMenu.Item onClick={closeDropdown} className={dropdownItemStyles}><Link href="/contactus"  className={dropdownItemLinkStyles}>Middle-east</Link></DropdownMenu.Item>
                         </DropdownMenu.SubContent>
                     </DropdownMenu.Sub>
                 </DropdownMenu.Content>

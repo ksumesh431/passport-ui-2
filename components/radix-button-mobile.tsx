@@ -18,6 +18,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
     };
 
     const dropdownItemStyles = "";
+    const dropdownItemLinkStyles = "w-full h-full flex items-center";
     return (
         <>
             <DropdownMenu.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -40,7 +41,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                     >
                         {/* IELTS Coaching */}
                         <DropdownMenu.Item onClick={handleItemClick}>
-                            <Link href="/ieltsCoaching" className="w-full">
+                            <Link href="/ieltsCoaching"   className={dropdownItemLinkStyles}>
                                 IELTS Coaching
                             </Link>
                         </DropdownMenu.Item>
@@ -58,47 +59,47 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                 }}
                             >
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/contactus">New Passport (India/Canada)</Link>
+                                    <Link href="/contactus"  className={dropdownItemLinkStyles}>New Passport (India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/newApplications/passportRenewals">Passport Renewal (India/Canada)</Link>
+                                    <Link href="/newApplications/passportRenewals"  className={dropdownItemLinkStyles}>Passport Renewal (India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/newApplications/PCC">PCC (Middle-east/India/Canada)</Link>
+                                    <Link href="/newApplications/PCC"  className={dropdownItemLinkStyles}>PCC (Middle-east/India/Canada)</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/newApplications/OCIApplications">OCI Applications</Link>
+                                    <Link href="/newApplications/OCIApplications"  className={dropdownItemLinkStyles}>OCI Applications</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/contactus">Surrender Certificate</Link>
+                                    <Link href="/contactus"  className={dropdownItemLinkStyles}>Surrender Certificate</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/contactus">PR Card Renewal</Link>
+                                    <Link href="/contactus"  className={dropdownItemLinkStyles}>PR Card Renewal</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/newApplications/visaApplications">Visitor Visa Applications</Link>
+                                    <Link href="/newApplications/visaApplications"  className={dropdownItemLinkStyles}>Visitor Visa Applications</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/newApplications/drivingExtracts">Driving Extract</Link>
+                                    <Link href="/newApplications/drivingExtracts"  className={dropdownItemLinkStyles}>Driving Extract</Link>
                                 </DropdownMenu.Item>
 
 
                                 <DropdownMenu.Item onClick={handleItemClick}>
-                                    <Link href="/newApplications/consentLetter">Child Travel Consent</Link>
+                                    <Link href="/newApplications/consentLetter"  className={dropdownItemLinkStyles}>Child Travel Consent</Link>
                                 </DropdownMenu.Item>
 
 
@@ -116,8 +117,8 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/translationServices/documents">Documents</Link></DropdownMenu.Item>
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat">Whatsapp Chat</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/translationServices/documents"  className={dropdownItemLinkStyles}>Documents</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/translationServices/whatsappChat"  className={dropdownItemLinkStyles}>Whatsapp Chat</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -132,8 +133,8 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/notaryServices/affidavits">Affidavits</Link> </DropdownMenu.Item>
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization">Document Notarization</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/notaryServices/affidavits"  className={dropdownItemLinkStyles}>Affidavits</Link> </DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/notaryServices/documentsNotarization"  className={dropdownItemLinkStyles}>Document Notarization</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -148,8 +149,8 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/poa/generalPOA">General POA</Link></DropdownMenu.Item>
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/poa/specificPOA">Specific POA</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/poa/generalPOA"  className={dropdownItemLinkStyles}>General POA</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}><Link href="/poa/specificPOA"  className={dropdownItemLinkStyles}>Specific POA</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
 
@@ -164,7 +165,7 @@ const RbuttonMobile: React.FC<RbuttonMobileProps> = ({ closeParentMenu }) => {
                                     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow
                                 }}
                             >
-                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/contactus">Middle-east</Link></DropdownMenu.Item>
+                                <DropdownMenu.Item onClick={handleItemClick} className={dropdownItemStyles}> <Link href="/contactus"  className={dropdownItemLinkStyles}>Middle-east</Link></DropdownMenu.Item>
                             </DropdownMenu.SubContent>
                         </DropdownMenu.Sub>
                     </DropdownMenu.Content>
