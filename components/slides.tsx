@@ -12,44 +12,45 @@ type SlideType = {
 };
 
 const OPTIONS: EmblaOptionsType = { align: 'start', loop: true };
+const ICON_CLASSNAMES = "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500";
 const SLIDES: SlideType[] = [
     {
-        icon: <FaShieldAlt className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaShieldAlt className={ICON_CLASSNAMES} />,
         title: "Why Should You Pick DocoAid?",
         description: "Expertise You Can Trust. DocoAid is backed by a team of highly experienced agents with years of expertise in the fields of document verification, authentication, and legalization.",
     },
     {
-        icon: <FaHandshake className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaHandshake className={ICON_CLASSNAMES} />,
         title: "Tailored Services for Every Need",
         description: "We understand that each client has unique requirements. We provide customized solutions to fit your specific needs for translation, notary services, and document legalization.",
     },
     {
-        icon: <FaTasks className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaTasks className={ICON_CLASSNAMES} />,
         title: "End-to-End Solutions",
         description: "From start to finish, DocoAid provides comprehensive support. Our services cover everything from initial consultations to document authentication and legalization.",
     },
     {
-        icon: <FaLock className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaLock className={ICON_CLASSNAMES} />,
         title: "Efficient and Secure Services",
         description: "At DocoAid, efficiency is a priority. We deliver fast, reliable services while maintaining the highest levels of security for your sensitive documents.",
     },
     {
-        icon: <FaGlobe className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaGlobe className={ICON_CLASSNAMES} />,
         title: "Comprehensive Global Expertise",
         description: "Whether you need assistance for international travel, business expansion, or complying with global regulations, DocoAid's services meet international standards.",
     },
     {
-        icon: <FaUsers className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaUsers className={ICON_CLASSNAMES} />,
         title: "Client-Centric Approach",
         description: "Our mission is to help you achieve your goals by providing excellent service that's tailored to your needs, with transparency and clear communication.",
     },
     {
-        icon: <FaStar className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaStar className={ICON_CLASSNAMES} />,
         title: "Reputation for Reliability",
         description: "DocoAid has built a solid reputation for being a reliable partner for all your documentation needs, with a proven track record in the industry.",
     },
     {
-        icon: <FaRocket className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-blue-500" />,
+        icon: <FaRocket className={ICON_CLASSNAMES} />,
         title: "Simplifying Your Path to Success",
         description: "DocoAid simplifies the paperwork process, ensuring you are well-prepared to navigate life's important milestones with confidence and ease.",
     },
