@@ -35,12 +35,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Docoaid",
-    description: "Your trusted partner in document authentication and legalization.",
-    images: ["https://docoaid.com/logo.webp"],
-  },
 };
 
 export default function RootLayout({
@@ -64,9 +58,7 @@ export default function RootLayout({
               "description":
                 "Docoaid is a platform that provides document authentication, verification, and legal services.",
               "sameAs": [
-                "https://www.facebook.com/docoaid",
-                "https://twitter.com/docoaid",
-                "https://www.linkedin.com/company/docoaid",
+                "https://www.instagram.com/docoaid/",
               ],
               "brand": {
                 "@type": "Brand",
