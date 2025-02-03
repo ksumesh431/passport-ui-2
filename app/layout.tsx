@@ -68,6 +68,10 @@ export default function RootLayout({
                 "https://twitter.com/docoaid",
                 "https://www.linkedin.com/company/docoaid",
               ],
+              "brand": {
+                "@type": "Brand",
+                "name": "Docoaid"
+              }
             }),
           }}
         />

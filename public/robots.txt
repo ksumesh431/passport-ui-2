@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docoaid.com
+
+# Sitemaps
+Sitemap: https://docoaid.com/sitemap.xml
